@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meds Reminder - Free for Everyone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #1f6feb 0%, #0969da 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons button, .hero-buttons a {
+            padding: 14px 28px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: transform 0.2s, opacity 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero-buttons .primary {
+            background: white;
+            color: #1f6feb;
+        }
+
+        .hero-buttons .secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .hero-buttons button:hover, .hero-buttons a:hover {
+            transform: translateY(-2px);
+        }
+
+        .features-section {
+            padding: 60px 20px;
+            background: var(--bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, #f0f7ff 0%, #eef5ff 100%);
+            padding: 60px 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--strong);
+        }
+
+        .testimonial-title {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section a {
+            background: white;
+            color: var(--primary);
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .pricing-banner {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .pricing-banner .badge {
+            display: inline-block;
+            background: var(--success-soft);
+            color: var(--success);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 0.75rem;
+        }
+
+        footer {
+            background: var(--strong);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <h1>Meds Reminder</h1>
+        </div>
+        <a href="index.html" class="primary-button">Open app</a>
+    </header>
+
+    <div class="hero">
+        <h1>Never Miss a Medication Dose Again</h1>
+        <p>Completely free medication reminders for patients and families. No payments. No paywalls. Just peace of mind.</p>
+        <div class="hero-buttons">
+            <a href="index.html" class="primary">Open app now</a>
+            <button class="secondary">Learn more</button>
+        </div>
+    </div>
+
+    <div class="pricing-banner">
+        <div class="badge">✨ Always Free</div>
+        <h2 style="margin-top: 12px; font-size: 1.8rem;">No payments. No limits. No surprises.</h2>
+        <p style="color: var(--muted); margin: 16px 0;">Meds Reminder is completely free for patients and caregivers. We make money through health partnerships, not from you.</p>
+    </div>
+
+    <div class="features-section">
+        <div class="section-header">
+            <h2>Everything you need</h2>
+            <p>Powerful features that cost nothing</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Smart reminders</h3>
+                <p>Get notified when it's time for your next dose</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍👩‍👧</div>
+                <h3>Family access</h3>
+                <p>Trusted caregivers get alerts if you miss a dose</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Medication history</h3>
+                <p>Track what you've taken and when</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Works everywhere</h3>
+                <p>Access on phone, tablet, or web</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Private & secure</h3>
+                <p>Your health data is yours alone</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💊</div>
+                <h3>Multi-medication</h3>
+                <p>Manage as many medications as you need</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="section-header">
+            <h2>Loved by patients and caregivers</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"I was always forgetting my morning medication. This app has been a game-changer for me."</p>
+                <div class="testimonial-author">Maria S.</div>
+                <div class="testimonial-title">Cancer patient, USA</div>
+            </div>
+            <div class="testimonial">
+                <p>"As a caregiver for my mother, I sleep better knowing the app alerts me if she misses a dose."</p>
+                <div class="testimonial-author">James T.</div>
+                <div class="testimonial-title">Family caregiver, Canada</div>
+            </div>
+            <div class="testimonial">
+                <p>"My medications are complicated. This app makes it so simple and organized."</p>
+                <div class="testimonial-author">Patricia L.</div>
+                <div class="testimonial-title">Managing multiple conditions, UK</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to take control of your health?</h2>
+        <a href="index.html">Start using Meds Reminder today</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Meds Reminder. All rights reserved.</p>
+        <p>Built with ❤️ for patients and caregivers everywhere</p>
+        <p>Privacy • Terms • Support</p>
+    </footer>
+</body>
+</html>
