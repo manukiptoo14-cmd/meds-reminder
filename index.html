@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meds Reminder</title>
+    <meta
+      name="description"
+      content="Medication reminder app for patients and caregivers."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Care support</p>
+          <h1>Meds Reminder</h1>
+        </div>
+        <button id="enableNotificationsBtn" class="secondary-button">
+          Enable reminders
+        </button>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel panel-highlight">
+          <div class="panel-header">
+            <h2>Today at a glance</h2>
+          </div>
+          <div id="summaryCards" class="summary-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Add medication</h2>
+          </div>
+          <form id="medicationForm" class="medicine-form">
+            <div class="field-grid">
+              <label>
+                Medication name
+                <input id="medName" name="name" type="text" placeholder="Example: Tamoxifen" required />
+              </label>
+
+              <label>
+                Dose
+                <input id="medDose" name="dose" type="text" placeholder="Example: 10 mg" required />
+              </label>
+
+              <label>
+                Time
+                <input id="medTime" name="time" type="time" required />
+              </label>
+
+              <label>
+                Repeat
+                <select id="medRepeat" name="repeat">
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option>
+                </select>
+              </label>
+
+              <label>
+                Caregiver name
+                <input id="caregiverName" name="caregiverName" type="text" placeholder="Example: Sarah" />
+              </label>
+
+              <label>
+                Caregiver contact
+                <input id="caregiverContact" name="caregiverContact" type="text" placeholder="Example: +1 (555) 888-1234" />
+              </label>
+            </div>
+
+            <div class="checkbox-group">
+              <h3>Reminder days</h3>
+              <div id="daysOfWeek" class="day-picker" aria-label="Select days">
+                <label><input type="checkbox" value="Mon" checked /> Mon</label>
+                <label><input type="checkbox" value="Tue" checked /> Tue</label>
+                <label><input type="checkbox" value="Wed" checked /> Wed</label>
+                <label><input type="checkbox" value="Thu" checked /> Thu</label>
+                <label><input type="checkbox" value="Fri" checked /> Fri</label>
+                <label><input type="checkbox" value="Sat" checked /> Sat</label>
+                <label><input type="checkbox" value="Sun" checked /> Sun</label>
+              </div>
+            </div>
+
+            <label>
+              Notes
+              <textarea id="medNotes" name="notes" rows="3" placeholder="Take with food, after breakfast, etc."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="primary-button">Save medication</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Upcoming reminders</h2>
+          </div>
+          <div id="upcomingList" class="list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Medication schedule</h2>
+          </div>
+          <div id="medicineList" class="list"></div>
+        </section>
+
+        <section class="panel alert-panel">
+          <div class="panel-header">
+            <h2>Caregiver alerts</h2>
+          </div>
+          <div id="caregiverAlerts" class="list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Medication history</h2>
+          </div>
+          <div id="historyList" class="list"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="summaryCardTemplate">
+      <div class="summary-card">
+        <span class="summary-label"></span>
+        <strong class="summary-value"></strong>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
